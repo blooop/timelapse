@@ -1,0 +1,1 @@
+ffmpeg -framerate 1/STEP_SECONDS -pattern_type glob -i 'input_directory/*.jpg' -vf "tblend=all_mode=average,drawtext=text='%{pts\:hms}':x=w-tw-10:y=h-th-10:fontsize=24:fontcolor=white" -r 60 output.mp4

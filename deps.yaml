@@ -10,5 +10,5 @@ pip_tools:
   - flit
   - pip #updates to latest pip
 
-pip:
-  - pip
+pyproject_main:
+  - all
