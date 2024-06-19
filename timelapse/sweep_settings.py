@@ -1,8 +1,4 @@
-import os
-from moviepy.editor import ImageSequenceClip, ImageClip
-from pathlib import Path
 import bencher as bch
-from timeit import default_timer as timer
 from timelapse import BenchTimelapse
 
 if __name__ == "__main__":
