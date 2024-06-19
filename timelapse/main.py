@@ -1,6 +1,4 @@
-import moviepy
 from moviepy.editor import ImageSequenceClip
-from pathlib import Path
 import bencher as bch
 
 
