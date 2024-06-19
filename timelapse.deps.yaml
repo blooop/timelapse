@@ -1,19 +1,19 @@
-apt_vscode:
-  - jq
-
 apt_sources:
+  - curl
+
+apt_tools:
   - git
   - git-lfs
-
-apt_language-toolchain:
   - python3-pip
-
-pip_tools:
-  - flit
-  - pip #updates to latest pip
+  - apt-utils
+  - jq
 
 apt:
   - ffmpeg
 
-pyproject:
-  - all
+pip_language-toolchain:
+  - flit #pixi autocomplete does not work with this removed, #TODO fix
+  - pip #updates to latest pip
+
+script_pixi-user:
+  - scripts/install_pixi.sh
