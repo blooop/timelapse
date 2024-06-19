@@ -1,0 +1,19 @@
+apt_vscode:
+  - jq
+
+apt_sources:
+  - git
+  - git-lfs
+
+apt_language-toolchain:
+  - python3-pip
+
+pip_tools:
+  - flit
+  - pip #updates to latest pip
+
+apt:
+  - ffmpeg
+
+pyproject:
+  - all
