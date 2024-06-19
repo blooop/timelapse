@@ -22,7 +22,8 @@ python = "3.11.*"
 
 [tool.pixi.pypi-dependencies]
 timelapse = { path = ".", editable = true }
-holobench =">=1.27.0"
+holobench ="*"
+moviepy ="*"
 
 [project.optional-dependencies]
 test = [

@@ -3201,7 +3201,7 @@ packages:
   name: timelapse
   version: 0.1.0
   path: .
-  sha256: 3f1d732561b9d40173fc88d281b00849c40266a14ab412d8a9c63a850f4f32f6
+  sha256: 9da749e135f0e52a20f10acf51989a8c324b235757510b4e035c6f882ab014c4
   requires_dist:
   - black>=23,<=24.4.2 ; extra == 'test'
   - pylint>=2.17.7,<=3.2.3 ; extra == 'test'
