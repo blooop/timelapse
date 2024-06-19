@@ -44,11 +44,14 @@ sudo systemctl restart docker
 sudo apt install git-lfs
 
 #Install rocker and rocker extensions which are used to launch the devcontainer
-pip install rocker off-your-rocker git+https://github.com/blooop/deps_rocker
-
+# pip install rocker off-your-rocker git+https://github.com/blooop/deps_rocker
 
 echo "testing docker install"
 
 docker run hello-world
 
 echo "you may need to restart your machine"
+
+#INSTALL PIXI
+curl -fsSL https://pixi.sh/install.sh | bash
+echo 'eval "$(pixi completion --shell bash)"' >> ~/.bashrc

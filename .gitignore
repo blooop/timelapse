@@ -166,3 +166,9 @@ install/**
 log/**
 raw/*
 cachedir/*
+# pixi environments
+.pixi
+*.egg-info
+
+managed_context/metadata.json
+test_suite_analysis/metadata.json
