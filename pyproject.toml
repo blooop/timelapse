@@ -15,7 +15,6 @@ platforms = ["linux-64"]
 [tool.pixi.dependencies]
 python = ">=3.10"
 
-
 [tool.pixi.feature.py310.dependencies]
 python = "3.10.*"
 [tool.pixi.feature.py311.dependencies]
@@ -23,7 +22,7 @@ python = "3.11.*"
 
 [tool.pixi.pypi-dependencies]
 timelapse = { path = ".", editable = true }
-holobench="1.27.0"
+holobench =">=1.27.0"
 
 [project.optional-dependencies]
 test = [
