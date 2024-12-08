@@ -9,7 +9,7 @@ class BenchTimelapse(bch.ParametrizedSweep):
     speedup = bch.FloatSweep(default=1, bounds=(1, 10))
     fps = bch.IntSweep(default=60, bounds=(30, 60))
     crf = bch.IntSweep(default=23, bounds=[0, 40])
-    run = bch.IntSweep(default=6, bounds=[1, 8])
+    run = bch.IntSweep(default=6, bounds=[1, 11])
     format = bch.StringSweep([".mp4", ".webm"])
     preview = bch.IntSweep(default=-1, bounds=[-1, 50])
     moviepy = bch.BoolSweep(default=True)

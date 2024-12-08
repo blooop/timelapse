@@ -24,6 +24,8 @@ python = "3.11.*"
 timelapse = { path = ".", editable = true }
 holobench ="*"
 moviepy ="*"
+# rerun-sdk="*"
+# numpy="*"
 
 [project.optional-dependencies]
 test = [
