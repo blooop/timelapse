@@ -15,4 +15,5 @@ jobs:
           frozen: true
           environments: default
       - name: prek
-        run: pixi run --frozen prek run --all-files --show-diff-on-failure
+        # `prek` is the pixi task `prek run -a`; extra args are appended to it.
+        run: pixi run --frozen prek --show-diff-on-failure
