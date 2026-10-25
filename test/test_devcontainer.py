@@ -8,7 +8,14 @@ DEVCONTAINER = REPO / ".devcontainer"
 
 def host_bind_sources() -> list[str]:
     config = (DEVCONTAINER / "devcontainer.json").read_text(encoding="utf-8")
-    return re.findall(r"source=\$\{localEnv:HOME\}/([^,]+),[^\"]*type=bind", config)
+    live = "\n".join(line for line in config.splitlines() if not line.lstrip().startswith("//"))
+    sources = []
+    for mount in re.findall(r'"([^"]*\btype=bind\b[^"]*)"', live):
+        fields = dict(field.split("=", 1) for field in mount.split(",") if "=" in field)
+        home, _, rest = fields.get("source", "").partition("${localEnv:HOME}/")
+        if not home and rest:
+            sources.append(rest)
+    return sources
 
 
 def test_init_host_creates_every_home_bind_source(tmp_path):
