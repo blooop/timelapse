@@ -1,11 +1,7 @@
 {
-    // Uses the template's prebuilt image by default for fast startup.
-    // To build locally: pixi run dev-use-local
-    // To use this repo's own prebuilt image: pixi run dev-use-prebuilt
-    // "build": {
-    //     "dockerfile": "Dockerfile",
-    //     "context": ".."
-    // },
+    // Uses the template's prebuilt image for fast startup. This repo has no
+    // Dockerfile and no dev-use-local / dev-use-prebuilt tasks; to build
+    // locally, bring those over from blooop/python_template first.
     "image": "ghcr.io/blooop/python_template/devcontainer:latest",
 
     // There is deliberately no "features" block. The claude-code feature is
