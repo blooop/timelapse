@@ -5,7 +5,6 @@ from timeit import default_timer as timer
 
 
 class BenchTimelapse(bch.ParametrizedSweep):
-
     speedup = bch.FloatSweep(default=1, bounds=(1, 10))
     fps = bch.IntSweep(default=60, bounds=(30, 60))
     crf = bch.IntSweep(default=23, bounds=[0, 40])

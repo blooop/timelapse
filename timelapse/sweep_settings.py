@@ -2,7 +2,6 @@ import bencher as bch
 from timelapse import BenchTimelapse
 
 if __name__ == "__main__":
-
     run_cfg = bch.BenchRunCfg()
     run_cfg.use_sample_cache = True
     run_cfg.only_hash_tag = True

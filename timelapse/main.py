@@ -3,7 +3,6 @@ import bencher as bch
 
 
 class BenchTimelapse(bch.ParametrizedSweep):
-
     speedup = bch.FloatSweep(default=100, bounds=(50, 400))
     fps = bch.IntSweep(default=60, bounds=(30, 60))
 
@@ -18,7 +17,6 @@ class BenchTimelapse(bch.ParametrizedSweep):
 
 
 if __name__ == "__main__":
-
     run_cfg = bch.BenchRunCfg()
     run_cfg.use_sample_cache = True
     run_cfg.only_hash_tag = True
