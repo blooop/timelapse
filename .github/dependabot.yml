@@ -13,7 +13,6 @@ updates:
       dev-dependencies:
         #try to group all development dependencies updates into a single pr
         patterns:
-          - "check-manifest"
           - "prek"
           - "pytest"
           - "pytest-cov"
@@ -24,6 +23,9 @@ updates:
         #try to group all third party library updates into a single pr
         patterns:
           - "*"
+  # Template-only: this watches .devcontainer/Dockerfile. A child repo that
+  # uses the prebuilt image and has no Dockerfile should drop this entry, or
+  # every Dependabot run reports a missing dependency file.
   - package-ecosystem: "docker"
     directory: "/.devcontainer"
     schedule:
