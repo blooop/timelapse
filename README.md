@@ -3,7 +3,6 @@ A template repo for python projects that is set up using [pixi](https://pixi.sh)
 
 This has basic setup for
 
-* pylint
 * ruff (formatting and linting)
 * pytest
 * git-lfs
@@ -12,6 +11,16 @@ This has basic setup for
 * codecov
 * pypi upload
 * dependabot
+
+## One ruff version
+
+Ruff is pinned once, as `ruff==X.Y.Z` in `pyproject.toml`. Everything else runs that ruff from the pixi environment:
+
+* `pixi run lint` and `pixi run ci` run `ruff check .` and `ruff format --check .`
+* the prek hooks in `.pre-commit-config.yaml` are `repo: local` hooks that run `pixi run --frozen ruff ...`, so they carry no version of their own
+* CI (`ci.yml` and `prek.yaml`) installs the locked pixi environment with `setup-pixi`
+
+To change the ruff version, edit the pin in `pyproject.toml` and run `pixi lock`. Do not add a `rev:` for ruff to `.pre-commit-config.yaml` or a `version:` to a ruff GitHub action. Child repos pick this setup up through `pixi run update-from-template-repo`.
 
 ## Continuous Integration Status
 
