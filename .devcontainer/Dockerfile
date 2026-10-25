@@ -10,8 +10,15 @@ RUN curl -L -o /usr/local/bin/pixi -fsSL --compressed "https://github.com/prefix
 # whose intermediates had their keys cracked in October 2026
 # (CVE-2026-111943). Ubuntu removed it in ca-certificates 20260816ubuntu0.26.04.1;
 # the test fails the build if the apt mirror has not caught up.
+#
+# git-lfs rides in the same apt layer: template children keep LFS rules in
+# .gitattributes, and without it `git status` and `git commit` fail in any repo
+# that stores files in LFS. It must be on the system PATH for plain `git`, which
+# a pixi-installed git-lfs is not.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --only-upgrade ca-certificates \
+    && apt-get install -y --no-install-recommends git-lfs \
+    && git lfs install --system \
     && rm -rf /var/lib/apt/lists/* \
     && test ! -e /etc/ssl/certs/emSign_ECC_Root_CA_-_G3.pem
 
