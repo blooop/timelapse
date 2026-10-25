@@ -73,7 +73,7 @@ update-from-template-repo = "./scripts/update_from_template.sh"
 
 
 [tool.setuptools.packages.find]
-include= ["python_template"]
+include= ["timelapse"]
 
 [tool.pylint]
 extension-pkg-whitelist = ["numpy"]
