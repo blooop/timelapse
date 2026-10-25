@@ -6,9 +6,10 @@
     // tasks that toggle this block -- `pixi run dev-use-local` (uncomment the
     // "build" block below and build from the Dockerfile) and
     // `pixi run dev-use-prebuilt` (point "image" at this repo's own image).
-    // A child repo that kept only devcontainer.json and post-create.sh has
-    // none of those; there the commented "build" block is inert, and to build
-    // locally you bring them over from blooop/python_template first.
+    // A child repo that kept only devcontainer.json, post-create.sh and
+    // claude-code/init-host.sh (the initializeCommand below) has none of
+    // those; there the commented "build" block is inert, and to build locally
+    // you bring them over from blooop/python_template first.
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "context": ".."
