@@ -7,7 +7,7 @@
 ## Development Commands
 <!-- These are from pyproject.toml - update if you customize tasks -->
 - `pixi run test` - Run tests
-- `pixi run lint` - Run linters (ruff, pylint, ty)
+- `pixi run lint` - Run linters (ruff check, ruff format --check, ty)
 - `pixi run format` - Format code
 - `pixi run ci` - Full CI pipeline
 
