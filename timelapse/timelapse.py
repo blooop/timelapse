@@ -1,4 +1,5 @@
 import os
+import subprocess
 from timeit import default_timer as timer
 
 import bencher as bch
@@ -87,7 +88,7 @@ class BenchTimelapse(bch.ParametrizedSweep):
 
             cmd = f"ffmpeg -framerate 60 -pattern_type glob -i '{path}/*.jpg' {vf} {speedup} -r 60 {self.timelapse}"
             print(f"running command: {cmd}")
-            os.system(cmd)
+            subprocess.run(cmd, shell=True, check=False)
         self.encoding_time = timer() - start
         self.file_size = os.stat(self.timelapse).st_size / (1024.0 * 1024.0)
         return super().__call__()
