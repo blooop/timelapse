@@ -29,13 +29,11 @@ python = "3.10.*"
 python = "3.11.*"
 [tool.pixi.feature.py312.dependencies]
 python = "3.12.*"
-[tool.pixi.feature.py313.dependencies]
-python = "3.13.*"
 
 [tool.pixi.pypi-dependencies]
 timelapse = { path = ".", editable = true }
-holobench ="*"
-moviepy ="*"
+holobench = ">=1.27.0,<1.28"
+moviepy = ">=1.0.3,<2"
 
 [project.optional-dependencies]
 test = [
@@ -62,7 +60,6 @@ default = { features = ["test"], solve-group = "default" }
 py310 = ["py310", "test"]
 py311 = ["py311", "test"]
 py312 = ["py312", "test"]
-py313 = ["py313", "test"]
 
 [tool.pixi.tasks]
 dev-add-docker = "devpod provider list | grep -qw docker || devpod provider add docker"
