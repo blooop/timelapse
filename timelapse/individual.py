@@ -1,6 +1,6 @@
 import bencher as bch
-from timelapse import BenchTimelapse
 
+from timelapse import BenchTimelapse
 
 if __name__ == "__main__":
     run_cfg = bch.BenchRunCfg()

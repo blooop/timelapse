@@ -1,5 +1,5 @@
-from moviepy.editor import ImageSequenceClip
 import bencher as bch
+from moviepy.editor import ImageSequenceClip
 
 
 class BenchTimelapse(bch.ParametrizedSweep):
