@@ -5,7 +5,7 @@ A template repo for python projects
 
 This has basic setup for
 
-* ruff
+* ruff (formatting and linting)
 * pytest
 * codecov
 * git-lfs
