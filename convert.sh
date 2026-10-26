@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034 # used by the ffmpeg commands below, which are kept as notes
 STEP_SECONDS=60
 # ffmpeg -framerate ${1/STEP_SECONDS} -pattern_type glob -i "*.jpg" -vf -r 60 output.mp4
 
