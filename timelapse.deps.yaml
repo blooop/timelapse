@@ -14,6 +14,3 @@ apt:
 pip_language-toolchain:
   - flit #pixi autocomplete does not work with this removed, #TODO fix
   - pip #updates to latest pip
-
-script_pixi-user:
-  - scripts/install_pixi.sh

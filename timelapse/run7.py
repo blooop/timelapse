@@ -1,4 +1,5 @@
 import bencher as bch
+
 from timelapse import BenchTimelapse
 
 if __name__ == "__main__":
